@@ -1508,6 +1508,18 @@ dependencies = [
 
 [[package]]
 name = "pem"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "39eb474073dfddbf7156515344266245d91ce698ddbf15e0498cef22b836f45a"
+dependencies = [
+ "base64 0.10.1",
+ "failure",
+ "lazy_static",
+ "regex",
+]
+
+[[package]]
+name = "pem"
 version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f4c220d01f863d13d96ca82359d1e81e64a7c6bf0637bcde7b2349630addf0c6"
@@ -1661,6 +1673,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "qjsonrpc"
+version = "0.0.9"
+dependencies = [
+ "dirs-next 1.0.2",
+ "futures",
+ "log",
+ "quinn",
+ "rand 0.7.3",
+ "rcgen 0.7.0",
+ "serde",
+ "serde_json",
+ "url",
+]
+
+[[package]]
 name = "qp2p"
 version = "0.9.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1674,7 +1701,7 @@ dependencies = [
  "igd",
  "log",
  "quinn",
- "rcgen",
+ "rcgen 0.8.9",
  "rustls 0.17.0",
  "serde",
  "serde_json",
@@ -1889,12 +1916,24 @@ dependencies = [
 
 [[package]]
 name = "rcgen"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e6d6cbbf5f43710b9242a4897f4671a469198e2d826d9df043fc16e046f45d8a"
+dependencies = [
+ "chrono",
+ "pem 0.6.1",
+ "ring",
+ "yasna",
+]
+
+[[package]]
+name = "rcgen"
 version = "0.8.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5cb7a2dc0e5307189b6933a61290ff06b65b35bdcaae2b2c50a0c3e355cb118e"
 dependencies = [
  "chrono",
- "pem",
+ "pem 0.8.2",
  "ring",
  "yasna",
 ]
@@ -2361,7 +2400,7 @@ dependencies = [
 
 [[package]]
 name = "sn_node"
-version = "0.25.31"
+version = "0.25.32"
 dependencies = [
  "async-log",
  "base64 0.10.1",
@@ -2381,6 +2420,7 @@ dependencies = [
  "log",
  "maplit",
  "pickledb",
+ "qjsonrpc",
  "quick-error",
  "rand 0.7.3",
  "rand_chacha 0.2.2",
@@ -2400,6 +2440,7 @@ dependencies = [
  "threshold_crypto",
  "tiny-keccak 1.5.0",
  "tokio",
+ "url",
  "xor_name",
 ]
 

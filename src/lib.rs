@@ -36,6 +36,7 @@ mod config_handler;
 mod error;
 mod network;
 mod node;
+mod node_rpc;
 mod to_db_key;
 
 pub mod utils;
